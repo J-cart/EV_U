@@ -79,11 +79,11 @@ class HomeFragment : Fragment() {
         val discoveryIntentFilter = IntentFilter(BluetoothDevice.ACTION_FOUND)
         requireActivity().registerReceiver(bluetoothSwitchReceiver, switchIntentFilter)
         requireActivity().registerReceiver(bluetoothDeviceDiscoveryReceiver, discoveryIntentFilter)
-
+        requestPermissions(permissionsResultLauncher)
         bluetoothInitialization()
         observeScannedDeviceResult()
         observeBluetoothState()
-        requestPermissions(permissionsResultLauncher)
+
         scanResultListAdapter.adapterClick {
             val action = HomeFragmentDirections.actionHomeFragmentToDeviceConnectionFragment(it)
             findNavController().navigate(action)
