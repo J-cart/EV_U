@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuthFragment">
+
+    <include
+        android:id="@+id/sign_up_layouts"
+        layout="@layout/sign_up_layout"
+        tools:visibility="invisible" />
+
+    <include
+        android:id="@+id/login_layouts"
+        layout="@layout/login_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
